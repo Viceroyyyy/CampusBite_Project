@@ -1,0 +1,6 @@
+.navbar{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;/* Flex items are evenly distributed in the line. */
+    align-items: center;
+}
