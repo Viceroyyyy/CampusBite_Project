@@ -4,3 +4,22 @@
     justify-content: space-between;/* Flex items are evenly distributed in the line. */
     align-items: center;
 }
+.navbar .logo {
+    width: 150px;
+}
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap : 20px;
+    color: #49557e;
+    font-size: 18px;
+
+}
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+.navbar-right #dark-mode{
+    width: 24px;
+}
