@@ -1,0 +1,23 @@
+.food-display{
+    margin-top: 30px;
+}
+.food-display h2{
+    font-size: max(2vw, 24px);
+    font-weight: 600;
+}
+
+.food-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px, 1fr));
+    /* 1.	repeat(auto-fill, ...):
+	•	The repeat() function tells the grid to repeat the column definition.
+	•	auto-fill means the grid will automatically fit as many columns as possible into the available space, even if some columns end up empty.
+	2.	minmax(240px, 1fr):
+	•	The minmax() function sets a minimum and maximum size for the columns.
+	•	240px is the minimum width a column can have.
+	•	1fr is the maximum width, where fr stands for a “fraction” of the available space. It will expand to fill the available space, ensuring the grid is responsive.
+ */
+    margin-top: 30px;
+    gap: 30px;
+    row-gap: 50px;
+}
