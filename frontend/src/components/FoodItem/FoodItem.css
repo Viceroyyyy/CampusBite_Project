@@ -1,0 +1,79 @@
+.food-item {
+    width: 100%;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #00000015;
+    /* 1.	0px 0px:
+	•	These are the horizontal offset and vertical offset. In this case, both are set to 0px, which means the shadow is directly behind the element, not offset to any side.
+	2.	10px:
+	•	This is the blur radius. A value of 10px means the shadow will be blurred over a distance of 10 pixels, creating a soft shadow.
+	3.	#00000015:
+	•	This is the color of the shadow. The color code #00000015 is black (#000000) with 15 (hexadecimal for 21 in decimal) as the alpha channel, representing a 9% opacity (approximately). This makes the shadow very light and subtle. */
+    transition: 0.3s;
+    animation: fadeIn 1s;
+}
+
+.food-item-image{
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+    /* •	First value (15px): Top-left corner will have a 15px radius (rounded).
+	•	Second value (15px): Top-right corner will also have a 15px radius (rounded).
+	•	Third value (0px): Bottom-right corner will have a 0px radius (sharp corner).
+	•	Fourth value (0px): Bottom-left corner will have a 0px radius (sharp corner). */
+}
+.food-item-info{
+    padding: 20px;
+}
+
+.food-item-name-rating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.food-item-name-rating p {
+    font-size: 20px;
+    font-weight: 500;
+}
+.food-item-name-rating img{
+    width: 70px;
+}
+
+.food-item-desc{
+    color: #676767;
+    font-size: 12px;
+}
+.food-item-price{
+    color: tomato;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+
+.food-item-img-container{
+    position: relative;
+}
+.food-item-img-container .add{
+    position: absolute;
+    width: 35px;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+.food-item-counter{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    border-radius: 50%;
+    background-color: aliceblue;
+}
+.food-item-counter img {
+    width: 30px;
+}
