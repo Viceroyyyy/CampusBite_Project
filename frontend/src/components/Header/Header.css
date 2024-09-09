@@ -43,3 +43,22 @@
     background-color: #c3c2c2;
     color: aliceblue;
 }
+
+@media (max-width: 1050px) {
+    .header-contents{
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 750px) {
+    
+    .header-contents p{
+        max-width: 65%;
+    }
+    .header-contents p {
+        display: none;
+    }
+    .header-contents button {
+        padding: 2vw 4vw;
+    }
+}
