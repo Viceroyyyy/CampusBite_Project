@@ -13,10 +13,12 @@ const {food_list} = useContext(StoreContext)
         <h2>Top Dishes Available!!</h2>
         <div className="food-display-list">
         {food_list.map((item,index)=>{
-
+          // Selection of Same Category items from the Explore Menu Section
+          if(category==="All"||category===item.category){
             return (
-                <FoodItem key={index} id={item._id} name={item.name} price={item.price} description={item.description} image={item.image}/>
-            )
+              <FoodItem key={index} id={item._id} name={item.name} price={item.price} description={item.description} image={item.image}/>
+          )
+          }
         })}
         </div>
       </div>
