@@ -18,14 +18,13 @@ const [showLogin,setShowLogin] = useState(false);
     <div className='app'>
       <NavBar setShowLogin={setShowLogin}/>
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
+        <Route path="/" element={<Home/>}></Route> {/* Link tag to connect the routes can be added in any component given that the to attribute conatins the same value as the path attribute of Route tag */}
         <Route path="/cart" element={<Cart/>}></Route>
         <Route path="/order" element={<PlaceOrder/>}></Route>
         {/* <Route path="/" element={<Home/>}></Route> */}
       </Routes>
     </div>
     <Footer />
-
     </>
     
   )
