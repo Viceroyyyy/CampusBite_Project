@@ -19,7 +19,8 @@ app.use(cors());
 connectDB();
 
 //api endpoints
-app.use('/api/food',foodRouter);
+app.use('/api/food',foodRouter);//This API endpoint is used to add food 
+app.use('/images',express.static('uploads')); //This api endpoint is used to display the image by adding the /images/image_filename in the localhost4000 url.
 
 
 app.get("/",(req,res)=>{
@@ -29,4 +30,4 @@ app.get("/",(req,res)=>{
 app.listen(port, ()=>{
     console.log(`Server Started on http://localhost:${port}`);
 })
-
+ 
