@@ -4,7 +4,13 @@ import { food_list } from "../assets/assets";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
+
+
   const [cartItems, setCartItems] = useState({});
+
+  const url = 'http://localhost:4000';
+
+  const [token,setToken] = useState("");
 
   const addToCart = (itemId) => {
     if (!cartItems[itemId]) {
@@ -14,9 +20,15 @@ const StoreContextProvider = (props) => {
     }
   };
   //To check the output in console whether the item is added or not..
+  // useEffect(() => {
+  //   console.log(cartItems);
+  // }, [cartItems]);
+
   useEffect(() => {
-    console.log(cartItems);
-  }, [cartItems]);
+    if(localStorage.getItem('token')){
+      setToken(localStorage.getItem('token'));
+    }
+  }, []);
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;
@@ -28,6 +40,8 @@ const StoreContextProvider = (props) => {
     }
     return totalAmount;
   };
+
+
 
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
@@ -58,7 +72,10 @@ const StoreContextProvider = (props) => {
     setCartItems,
     addToCart,
     removeFromCart,
-    getTotalCartAmount
+    getTotalCartAmount,
+    url,
+    setToken,
+    token
   };
 
   return (
