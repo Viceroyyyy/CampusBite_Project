@@ -2,7 +2,8 @@ import express from "express";
 import cors from "cors";
 import { connectDB } from "./config/db.js";
 import foodRouter from "./routes/foodRoute.js";
-
+import userRouter from "./routes/userRoute.js";
+import 'dotenv/config'
 
 
 
@@ -21,7 +22,7 @@ connectDB();
 //api endpoints
 app.use('/api/food',foodRouter);//This API endpoint is used to add food 
 app.use('/images',express.static('uploads')); //This api endpoint is used to display the image by adding the /images/image_filename in the localhost4000 url.
-
+app.use('/api/user',userRouter);
 
 app.get("/",(req,res)=>{
     res.send("API Working");
