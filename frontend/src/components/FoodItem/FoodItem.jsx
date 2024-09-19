@@ -6,14 +6,14 @@ const FoodItem = ({id,name,price,description,image}) => {
 
     // Now this itemCount state is created for each food item so if there are 32 food items it will be created for each state hence to solve this problem we use a cart object in context API 
     // const [itemCount,setItemCount] = useState(0);
-    const {cartItems,setCartItems,addToCart,removeFromCart} = useContext(StoreContext);
+    const {cartItems,setCartItems,addToCart,removeFromCart,url} = useContext(StoreContext);
 
   return (
     <div>
       <div className="food-item">
         {/* Food-Item Image */}
         <div className="food-item-img-container">
-            <img className="food-item-image" src={image} alt="" />
+            <img className="food-item-image" src={url+"/images/"+image} alt="" />
             {/* Add Item and Item COunter Added */}
             {/*Working of Item Counter:-
                 1. Added a useState Hook and by default the value of itemCounter is set to 0
