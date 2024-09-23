@@ -6,6 +6,7 @@ import Cart from './pages/Cart/Cart'
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
 import Footer from './components/Footer/Footer'
 import LoginPopup from './components/LoginPopup/LoginPopup'
+import MyOrders from './pages/MyOrders/MyOrders'
 const App = () => {
 
 const [showLogin,setShowLogin] = useState(false);
@@ -21,6 +22,7 @@ const [showLogin,setShowLogin] = useState(false);
         <Route path="/" element={<Home/>}></Route> {/* Link tag to connect the routes can be added in any component given that the to attribute conatins the same value as the path attribute of Route tag */}
         <Route path="/cart" element={<Cart/>}></Route>
         <Route path="/order" element={<PlaceOrder/>}></Route>
+        <Route path="/myorder" element={<MyOrders/>}></Route>
         {/* <Route path="/" element={<Home/>}></Route> */}
       </Routes>
     </div>
