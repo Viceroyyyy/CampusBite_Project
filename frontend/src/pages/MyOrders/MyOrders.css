@@ -47,6 +47,11 @@
     background-color: rgb(252, 116, 92);
     color: aliceblue;
     padding: 12px 0px;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+}
+.my-orders-order button:hover{
+    transform: scale(1.05);
 }
 
 @media (max-width: 700px) {
