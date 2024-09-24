@@ -1,0 +1,61 @@
+.order-item{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 1fr;
+    align-items: center;
+    gap: 30px;
+    font-size: 14px;
+    padding: 10px 20px;
+    color: #454545;
+    border: none;
+    border-radius: 8px;
+    background-color: aliceblue;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    margin-top: 30px;
+}
+.order-item:hover{
+    transform: scale(1.05);
+}
+
+.order-item-food{
+    font-weight: 600;
+}
+
+.order-item select{
+    background-color: #ffe8e4;
+    border: 1px solid tomato;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+@media (max-width: 621px) {
+    .order-item{
+        /* font-size: 10px;
+         */
+         gap: 15px;
+
+    }
+    .order-item img{
+        display: none;
+    }
+    /* .order-item select{
+        /* font-size: 10px; */
+        
+    } 
+    
+
+@media (max-width: 436px) {
+    .order-item{
+        font-size: 10px;
+        gap:15px;
+    }
+    .order-item img{
+        display: none;
+    }
+    .order-item select{
+        font-size: 10px;
+    }
+    .items{
+        display: none;
+    }
+}
